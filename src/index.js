@@ -4,11 +4,13 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 
+const WidgetDiv = document.querySelector('.exfil_widget')
+
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <App widget={WidgetDiv}/>
   </React.StrictMode>,
-  document.getElementById('root')
+  WidgetDiv
 );
 
 // If you want to start measuring performance in your app, pass a function
