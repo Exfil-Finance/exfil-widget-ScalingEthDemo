@@ -1,6 +1,6 @@
 {
-  "short_name": "React App",
-  "name": "Create React App Sample",
+  "short_name": "Exfil Widget",
+  "name": "Exfil Widget Sample React App",
   "icons": [
     {
       "src": "favicon.ico",
