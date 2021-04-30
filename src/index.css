@@ -9,6 +9,18 @@
   color: white;
 }
 
+.ant-dropdown-link {
+  padding-left: 10px;
+}
+
+.recipient-label {
+  padding-top: 50px;
+}
+
+.fee-label {
+  padding-top: 50px;
+}
+
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
