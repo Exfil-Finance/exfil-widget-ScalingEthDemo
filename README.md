@@ -9,7 +9,7 @@ Copy these 3 lines of code and replace YOUR_CONTRACT_ADDRESS with the address of
 ```html
 <link href="https://exfil.github.io/exfil-widget/index.css" rel="stylesheet" />
 <script src="https://exfil.github.io/exfil-widget/index.js"></script>
-<div class="exfil_widget" contract-address="YOUR_CONTRACT_ADDRESS"></div>
+<div class="exfil_widget"></div>
 ```
 
 ## Available Scripts
