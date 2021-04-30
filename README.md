@@ -4,12 +4,12 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 ## Usage
 
-Copy these 3 lines of code and replace YOUR_CONTRACT_ADDRESS with the address of the L2 bridge contract that you want to enable fast withdrawals from.
+Simply add these 3 lines of code to embed the widget into your app.
 
 ```html
 <link href="https://exfil.github.io/exfil-widget/index.css" rel="stylesheet" />
 <script src="https://exfil.github.io/exfil-widget/index.js"></script>
-<div class="exfil_widget" contract-address="YOUR_CONTRACT_ADDRESS"></div>
+<div class="exfil_widget"></div>
 ```
 
 ## Available Scripts
