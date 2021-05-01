@@ -13,12 +13,18 @@
   padding-left: 10px;
 }
 
-.recipient-label {
-  padding-top: 50px;
+.input-label {
+  padding-top: 20px;
 }
 
-.fee-label {
-  padding-top: 50px;
+.fee-section {
+  padding-top: 20px;
+}
+
+#exfil-btn {
+  width: 240px;
+  height: 80px;
+  font-size: 28px;
 }
 
 code {

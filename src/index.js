@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import 'antd/dist/antd.css';
-import { Button, Modal, Input, InputNumber, Menu, Dropdown, message } from 'antd';
+import { Button, Modal, Input, InputNumber, Menu, Dropdown, Divider, message } from 'antd';
 import { ToTopOutlined, DownOutlined } from "@ant-design/icons";
 
 const WidgetDiv = document.querySelector('.exfil_widget')
@@ -61,6 +61,7 @@ const App = () => {
   return (
     <>
       <Button
+        id="exfil-btn"
         type="primary"
         shape="round"
         icon={<ToTopOutlined />}
@@ -70,12 +71,13 @@ const App = () => {
       </Button>
 
       <Modal
-        title="Exfil instant withdrawal back to L1"
+        title="Confirm instant withdrawal back to L1"
         visible={isModalVisible}
         onOk={handleOk}
         confirmLoading={confirmLoading}
         onCancel={handleCancel}
       >
+        <p className="input-label"> Token to withdraw: </p>
         <InputNumber
           style={{
             width: 100,
@@ -94,16 +96,19 @@ const App = () => {
           </a>
         </Dropdown>
 
-        <p className="recipient-label"> Recipient: </p>
+        <p className="input-label"> Recipient: </p>
         <Input placeholder="myetherwallet.eth" />
 
-        <p className="fee-label" hidden={!isTokenSelected}>
-          Instant withdrawal fee: <strong>{tokenValue * feePercentage} {tokenText}</strong>
-        </p>
+        <div className="fee-section" hidden={!isTokenSelected}>
+          <Divider />
+          <p>
+            Instant withdrawal fee: <strong>{(tokenValue * feePercentage).toFixed(2)} {tokenText}</strong>
+          </p>
 
-        <p className="fee-label" hidden={!isTokenSelected}>
-          You receive:
-        </p>
+          <p>
+            You receive: <strong>{(tokenValue - (tokenValue * feePercentage)).toFixed(2)} {tokenText}</strong>
+          </p>
+        </div>
 
       </Modal>
     </>
